@@ -1,8 +1,13 @@
 <h1>Goods For Sale</h1>
 
-<div class="panel panel-default" *ngFor="let post of posts | async" (click)="goToDetailPage(post)">
+<div class="panel panel-default" *ngFor="let post of posts | async">
   <div class="panel-body">
-    <h2>{{post.title}}, Price: {{post.price}}$</h2>
+    <h2 (click)="goToDetailPage(post)">{{post.title}}, Price: {{post.price}}$</h2>
+    <div *ngIf="currentRoute === '/admin'">
+      {{post.content}} :: <strong>category</strong>: {{post.category}}
+      <hr>
+      <app-edit-post [selectedPost]="post"></app-edit-post>
+    </div>
   </div>
 
 </div>

@@ -21,4 +21,18 @@ export class PostService {
     return this.database.object('posts/'+postId);
   }
 
+  updatePost(localUpdatedPost){
+    var albumEntryInFirebase = this.getPostById(localUpdatedPost.$key);
+    albumEntryInFirebase.update({title: localUpdatedPost.title,
+                                content: localUpdatedPost.content,
+                                price: localUpdatedPost.price,
+                                category: localUpdatedPost.category,
+                                image: localUpdatedPost.image});
+  }
+
+  deletePost(localPostToDelete){
+    let postEntryInFirebase = this.getPostById(localPostToDelete.$key);
+    postEntryInFirebase.remove();
+  }
+
 }
