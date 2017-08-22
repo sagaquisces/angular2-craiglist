@@ -1,0 +1,24 @@
+{ "posts": [{
+  "title": "Pulse, selling mine",
+  "content": "Aint got no use for it",
+  "price": 4,
+  "image": "none",
+  "category": "used goods",
+  "id": "1"
+  },{
+    "title": "Lost car",
+    "content": "Will pay a handsome fee for the retrieval",
+    "price": 100,
+    "image": "none",
+    "category": "automobiles",
+    "id": "2"
+    },{
+      "title": "Stole a bike",
+      "content": "hawkin it for cheap call for info",
+      "price": 25,
+      "image": "none",
+      "category": "stolen goods",
+      "id": "3"
+      }]
+
+}

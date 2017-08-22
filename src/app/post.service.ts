@@ -17,12 +17,8 @@ export class PostService {
     this.posts.push(newPost);
   }
 
-  getPostById(postId: number){
-    // for (let i = 0; i <= POSTS.length - 1; i++) {
-    //   if (POSTS[i].id === postId) {
-    //     return POSTS[i];
-    //   }
-    // }
+  getPostById(postId: string){
+    return this.database.object('posts/'+postId);
   }
 
 }

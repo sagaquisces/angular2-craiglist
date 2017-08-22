@@ -19,8 +19,8 @@ export class HomeComponent implements OnInit {
     this.posts = this.postService.getPosts();
   }
 
-  goToDetailPage(clickedPost: Post){
-    // this.router.navigate(['posts', clickedPost.id]);
-  }
+  goToDetailPage(clickedPost){
+    this.router.navigate(['posts', clickedPost.$key]);
+  };
 
 }

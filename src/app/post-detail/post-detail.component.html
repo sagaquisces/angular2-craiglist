@@ -1,3 +1,3 @@
-<h1>{{postToDisplay.title}}, Price: {{postToDisplay.price}}$</h1>
+<h1>{{(postToDisplay | async).title}}, Price: {{(postToDisplay | async).price}}$</h1>
 <hr>
-<h2>{{postToDisplay.content}}</h2>
+<h2>{{(postToDisplay | async).content}}</h2>
