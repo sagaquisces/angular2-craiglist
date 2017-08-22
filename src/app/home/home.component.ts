@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Post } from '../post.model';
 import { PostService } from '../post.service';
+import { FirebaseListObservable } from 'angularfire2/database';
 
 
 @Component({
@@ -10,8 +11,8 @@ import { PostService } from '../post.service';
   styleUrls: ['./home.component.css'],
   providers: [PostService]
 })
-export class HomeComponent {
-  posts: Post[];
+export class HomeComponent implements OnInit {
+  posts: FirebaseListObservable<any[]>;
   constructor(private router: Router, private postService: PostService) {}
 
   ngOnInit(){
@@ -19,7 +20,7 @@ export class HomeComponent {
   }
 
   goToDetailPage(clickedPost: Post){
-    this.router.navigate(['posts', clickedPost.id]);
+    // this.router.navigate(['posts', clickedPost.id]);
   }
 
 }

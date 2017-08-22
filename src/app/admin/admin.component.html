@@ -1,0 +1,38 @@
+<div class="panel panel-info">
+
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Post</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Post Title:</label>
+      <br>
+      <input #newTitle />
+    </div>
+
+    <div>
+      <label>Post Content:</label>
+      <br>
+      <textarea #newContent></textarea>
+    </div>
+
+    <div>
+      <label>Post Category:</label>
+      <br>
+      <input #newCategory />
+    </div>
+
+    <div>
+      <label>Price:</label>
+      <br>
+      <input type="number" #newPrice />
+    </div>
+
+    <div>
+      <label>Image:</label>
+      <br>
+      <input #newImage />
+    </div>
+    <button class="btn btn-info" (click)="submitForm(newTitle.value, newContent.value, newPrice.value, newImage.value, newCategory.value)">Submit</button>
+  </div>
+</div>

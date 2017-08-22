@@ -1,6 +1,6 @@
 <h1>Goods For Sale</h1>
 
-<div class="panel panel-default" *ngFor="let post of posts" (click)="goToDetailPage(post)">
+<div class="panel panel-default" *ngFor="let post of posts | async" (click)="goToDetailPage(post)">
   <div class="panel-body">
     <h2>{{post.title}}, Price: {{post.price}}$</h2>
   </div>
